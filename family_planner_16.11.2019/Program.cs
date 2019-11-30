@@ -30,9 +30,9 @@ namespace family_planner_16._11._2019
             conn.Close();
 */
 
-            FAMILY myFamily = new FAMILY();
+           FAMILY myFamily = new FAMILY();
            myFamily.AddMember();
-            myFamily.PrintMembers();
+           myFamily.PrintMembers();
         // myFamily.AddMember();
         //   myFamily.SearchMember();
          //   myFamily.SearchMember();
