@@ -9,6 +9,12 @@ namespace family_planner_16._11._2019
     class Program
     {
         static void Main(string[] args)
+
+            //Should this database command be on own class as method what you could - so main would be shorter and more readable?
+
+
+
+
         { //Connecting data base
           // Specify connection options and open an connection
           /*

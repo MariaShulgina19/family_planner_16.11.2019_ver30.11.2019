@@ -2,6 +2,8 @@
 
 namespace family_planner_16._11._2019
 {
+
+    //String v - could there be used more describing name?
     internal class NpgsqlCommand
     {
         private string v;

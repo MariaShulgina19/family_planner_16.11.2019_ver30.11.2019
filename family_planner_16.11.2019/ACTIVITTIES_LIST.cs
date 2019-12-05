@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace family_planner_16._11._2019
 {
+
+                //Should there be more accurate naming changes - ACTIVITY k? Should it be more describing? For example:
+                //int mom = 0; 
+                //Naming changes: Some class etc names are all capital letters etc. For example ACTIVITIES_LIST, should it be more Activities_list for example
+                //Could use more comments inside the code to make it more readable and more understandable
     class ACTIVITTIES_LIST
     {
 
@@ -25,7 +30,7 @@ namespace family_planner_16._11._2019
         {
 
 
-            //
+
             Console.WriteLine("Give Activity Name");
             string name = Console.ReadLine();
             ACTIVITY k = new ACTIVITY(name); 
