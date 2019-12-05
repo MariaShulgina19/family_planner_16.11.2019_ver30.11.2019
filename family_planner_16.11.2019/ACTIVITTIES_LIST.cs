@@ -25,7 +25,7 @@ namespace family_planner_16._11._2019
         {
 
 
-
+            //
             Console.WriteLine("Give Activity Name");
             string name = Console.ReadLine();
             ACTIVITY k = new ACTIVITY(name); 
