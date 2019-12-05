@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace family_planner_16._11._2019
 {
+
+    //There are a lot of excess empty rows, these could be cleaned and make code more readable
+    //Here also some naming changes, for example k
     class FAMILY
     {
         //Class Family is kind of list of members
