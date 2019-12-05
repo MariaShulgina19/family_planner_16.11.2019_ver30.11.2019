@@ -34,7 +34,7 @@ namespace family_planner_16._11._2019
             Console.WriteLine("Give Member Name");
             string name = Console.ReadLine();
             
-            while (name != null) //checking if name is not 0
+            while (string.IsNullOrEmpty(name)) //checking if name is not 0 string.IsNullOrEmpty(name)
             {
                 Console.WriteLine("Give Member Name again"); //checking if 0
                 name = Console.ReadLine();

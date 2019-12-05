@@ -19,17 +19,20 @@ namespace family_planner_16._11._2019
         public FAMILY _familyTest { get; set; }
         public MEMBER(string memberName)
 
+
+
         {    //add check if name is already exixt
-          //if ( !_familyTest._memberNameFamily.Equals(memberName)) //30.11.2019 trying to check if name is exist
-         // {
+         //// if ( !_familyTest._memberNameFamily.Equals(memberName))
+         //       if (!_familyTest._memberNameFamily.Contains(memberName))//30.11.2019 trying to check if name is exist
+              //  {
                 _memberName = memberName;
                 _memberID = _amountOfmembers;
                 _amountOfmembers++;
-         //}
-           //else
-           // {
-           //     Console.WriteLine("Member is exist, try to give new name");
-           //}
+        // }
+        //   else
+        //    {
+        //        Console.WriteLine("Member is exist, try to give new name");
+        //   }
 
         }    
     }
