@@ -47,6 +47,7 @@
     <Compile Include="ACTIVITY.cs" />
     <Compile Include="COMMENTS.cs" />
     <Compile Include="FAMILY.cs" />
+    <Compile Include="MainMenu.cs" />
     <Compile Include="MEMBER.cs" />
     <Compile Include="NpgsqlCommand.cs" />
     <Compile Include="NpgsqlConnection.cs" />
