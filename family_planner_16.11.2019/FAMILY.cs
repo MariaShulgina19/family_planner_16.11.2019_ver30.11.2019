@@ -30,14 +30,23 @@ namespace family_planner_16._11._2019
 
         public void AddMember()
         {
-           
-           
 
             Console.WriteLine("Give Member Name");
-            string name =Console.ReadLine();
-            MEMBER k = new MEMBER(name); //Maat[i] pick up i 
-                                         //getting member id
+            string name = Console.ReadLine();
+            
+            while (name != null) //checking if name is not 0
+            {
+                Console.WriteLine("Give Member Name again"); //checking if 0
+                name = Console.ReadLine();
 
+                //if (name != null)
+                //{
+                //     //Maat[i] pick up i 
+                //    return;                  //getting member id
+                //}
+            }
+
+            MEMBER k = new MEMBER(name);
             Console.WriteLine("Give Member Age");
             int age;
             string response = Console.ReadLine();
