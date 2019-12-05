@@ -9,6 +9,7 @@ namespace family_planner_16._11._2019
     class RESERVATIONS_LIST :ACTIVITTIES_LIST
     {
         
+        
         public FAMILY _familyTest { get; set; }//added 29.11.2019 to try add name from famaly list
         public ACTIVITTIES_LIST _activity_listTest { get; set; }
         private List<RESERVATION> ResevationList = new List<RESERVATION>();// family created as a list of members

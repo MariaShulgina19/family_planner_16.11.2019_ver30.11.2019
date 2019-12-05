@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="family_planner_16._11._2019.ACTIVITTIES_LIST">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAgAAAAAAQAAAAAARAA=</HashCode>
+      <FileName>ACTIVITTIES_LIST.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="ActivitiesList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="family_planner_16._11._2019.ACTIVITY">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgCAAAAAAAAAAAgBIAAACAQAAAAAEAAAAAAAABAAAAA=</HashCode>
+      <FileName>ACTIVITY.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="family_planner_16._11._2019.COMMENTS" Collapsed="true">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>COMMENTS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="family_planner_16._11._2019.FAMILY">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAQAAgAEEAAIAgAAABAE=</HashCode>
+      <FileName>FAMILY.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="FamilyList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="family_planner_16._11._2019.MainMenu">
+    <Position X="11.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAI=</HashCode>
+      <FileName>MainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="family_planner_16._11._2019.MEMBER">
+    <Position X="7.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAABAgAAAAAAAAABAAAAAAAAAAIAAAAIAAAAAAAAA=</HashCode>
+      <FileName>MEMBER.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="family_planner_16._11._2019.NpgsqlCommand" Collapsed="true">
+    <Position X="9.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAQAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>NpgsqlCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="family_planner_16._11._2019.NpgsqlConnection" Collapsed="true">
+    <Position X="13.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAABAAAACAAAA=</HashCode>
+      <FileName>NpgsqlConnection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="family_planner_16._11._2019.NpgsqlDataReader" Collapsed="true">
+    <Position X="11.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NpgsqlDataReader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="family_planner_16._11._2019.PgSqlConnection" Collapsed="true">
+    <Position X="11.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PgSqlConnection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="family_planner_16._11._2019.Program" Collapsed="true">
+    <Position X="11.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="family_planner_16._11._2019.RESERVATION">
+    <Position X="4.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA=</HashCode>
+      <FileName>RESERVATION.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="activity" />
+      <Field Name="member" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="family_planner_16._11._2019.RESERVATIONS_LIST">
+    <Position X="0.75" Y="5.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAIAAAAAAQAA=</HashCode>
+      <FileName>RESERVATIONS_LIST.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="ResevationList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

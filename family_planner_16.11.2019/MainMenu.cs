@@ -23,7 +23,8 @@ namespace family_planner_16._11._2019
             FAMILY myFamily = new FAMILY();
             ACTIVITTIES_LIST myActivitiesList = new ACTIVITTIES_LIST();
             RESERVATIONS_LIST myReservationList = new RESERVATIONS_LIST(myFamily, myActivitiesList);
-           
+            Console.WriteLine("test");
+
             Console.WriteLine("WELCOME TO FAMILY PLANNER ver 2.1");
             Console.WriteLine();
             Console.WriteLine("MAIN MENU");
