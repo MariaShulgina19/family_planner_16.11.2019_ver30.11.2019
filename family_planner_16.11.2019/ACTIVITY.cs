@@ -11,7 +11,7 @@ namespace family_planner_16._11._2019
     {
         public int _activityID { get; set; }
         public string _activityName { get; set; }
-        public string _classname { get; set; }
+        
         public DateTime _activityDay { get; set; }
         public DateTime _acticityStartTime { get; set; }
         public DateTime _acticityEndTime { get; set; }
@@ -22,23 +22,15 @@ namespace family_planner_16._11._2019
         static int _amountOfactivities = 1;
 
         public ACTIVITY(string activityName)
-        {
+        { //Need to add check if activity already exist with same parameters
             _activityName = activityName;
             _activityID = _amountOfactivities;
             _amountOfactivities++;
         }
 
-        public string GiveClassName() //return class name to know what to create 
-        { return "activity"; }
-        
+       
+           
 
         
-
-        /*public void Duration()
-        {
-            _activityDuration = (int.Parse(_acticityEndTime.ToString()) - int.Parse(_acticityStartTime.ToString()));
-            //it gives 0
-        }
-        */
     }
 }

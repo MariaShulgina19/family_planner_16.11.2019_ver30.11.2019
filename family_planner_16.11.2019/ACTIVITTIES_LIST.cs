@@ -132,7 +132,7 @@ namespace family_planner_16._11._2019
             Console.WriteLine("ok!");
             k._acticityEndTime= endTime;
             Console.WriteLine();
-            Console.WriteLine("New "+ k.GiveClassName() + " " + name + " created! " + " at " + k._activityDay.ToShortDateString() + " from- "+ k._acticityStartTime.ToShortTimeString()  + "; to- "+k._acticityEndTime.ToShortTimeString()+";");
+            Console.WriteLine("New "  + " " + name + " created! " + " at " + k._activityDay.ToShortDateString() + " from- "+ k._acticityStartTime.ToShortTimeString()  + "; to- "+k._acticityEndTime.ToShortTimeString()+";");
             //Console.WriteLine($"Duration is {k._activityDuration};"); //it gives 0
             
                
@@ -158,7 +158,7 @@ namespace family_planner_16._11._2019
 
         }
 
-        //Searching in the list by name. Can be added  seach by date and time to check afterwords it time is busy
+        //Searching in the list by name. Can be added  seach by date and time to check afterwords if time is busy
         public void SearchPositionsByName()  
         {
             Console.WriteLine("Will try to search activity");
