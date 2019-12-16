@@ -21,7 +21,39 @@ namespace family_planner_16._11._2019
             _activity_listTest = activityList; //new 30.11.2019
 
         }
-        
+        // ADDING New activities fot test only, and it activated with 13
+        override public void AddPositionForTest()  
+        {
+
+          
+            RESERVATION ResforTest1 = new RESERVATION("SPORT1");
+
+            ResforTest1.member = _familyTest.SearchMembeAddToResevation("Maria");
+
+            ResforTest1.activity = _activity_listTest.SearchPositionsByNameToAddToReservation("RUN");
+
+            ResevationList.Add(ResforTest1);
+
+
+
+            RESERVATION ResforTest2 = new RESERVATION("SPORT2");
+
+            ResforTest2.member = _familyTest.SearchMembeAddToResevation("Maria");
+
+            ResforTest2.activity = _activity_listTest.SearchPositionsByNameToAddToReservation("SKI");
+
+            ResevationList.Add(ResforTest2);
+
+
+            RESERVATION ResforTest3 = new RESERVATION("SPORT3");
+
+            ResforTest3.member = _familyTest.SearchMembeAddToResevation("Robinson");
+
+            ResforTest3.activity = _activity_listTest.SearchPositionsByNameToAddToReservation("DANCE");
+
+            ResevationList.Add(ResforTest3);
+
+        }
         override public void AddPosition() // need to override to connect member and activity
         {
             //_familyTest.PrintMembers(); it was fot test only
@@ -33,13 +65,11 @@ namespace family_planner_16._11._2019
             //need to pick uo from memberlist oilio all data for this member
             MEMBER member = null;
             Console.WriteLine("Give Member Name");
+
             //string somename = ""; //check what is this
             while ( member == null )
             {
-                //Console.WriteLine("Give Member Name");
-                //somename = Console.ReadLine();
-                //While loop löytyykö _familyTest oliosta somename
-               // Console.WriteLine("Starting search");
+               
                 member = _familyTest.SearchMembeAddToResevation(Console.ReadLine());
               
             }
@@ -76,16 +106,35 @@ namespace family_planner_16._11._2019
 
 
             
-            Console.WriteLine($"(Reservation for {k.member._memberName} created. Member is {k.member._memberAge} years old." +
+            Console.WriteLine($"Reservation for {k.member._memberName} created. Member is {k.member._memberAge} years old." +
                 $"for {k.activity._activityName} Date: {k.activity._activityDay.ToShortDateString()}");
             Console.ReadLine();
             ResevationList.Add(k);
 
         }
 
-        
-        
-            
+
+        override public void PrintPositions() //PrintActivities added 16.12
+
+        {
+            Console.WriteLine();
+            Console.WriteLine("Here is all reservations:");
+
+            Console.WriteLine();
+            foreach (var item in ResevationList)
+            {
+                Console.WriteLine($"Reservation for {item.member._memberName}"+
+                    $"\n - {item.activity._activityName}, {item.activity._activityDay.ToShortDateString()} from {item.activity._acticityStartTime.ToShortTimeString()} to {item.activity._acticityEndTime.ToShortTimeString()} .");
+            }
+
+            Console.WriteLine();
+            Console.ReadLine();
+
+
+           //Add search method in reservation
+        }
+
+
     }
 }
 

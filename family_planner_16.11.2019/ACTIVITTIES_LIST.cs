@@ -20,6 +20,37 @@ namespace family_planner_16._11._2019
         }
 
         //method Adding new activity
+
+
+        virtual public void AddPositionForTest()  // ADDING New activities fot test
+        {
+            ACTIVITY forTest1 = new ACTIVITY("RUN");
+            forTest1._activityDay = DateTime.Parse("20.12");
+            forTest1._acticityStartTime= DateTime.Parse("11:10");
+            forTest1._acticityEndTime = DateTime.Parse("12:10");
+
+            ActivitiesList.Add(forTest1);
+
+            ACTIVITY forTest2 = new ACTIVITY("SKI");
+            forTest2._activityDay = DateTime.Parse("22.12");
+            forTest2._acticityStartTime = DateTime.Parse("13:00");
+            forTest2._acticityEndTime = DateTime.Parse("14:00");
+
+            ActivitiesList.Add(forTest2);
+
+            ACTIVITY forTest3 = new ACTIVITY("DANCE");
+            forTest3._activityDay = DateTime.Parse("24.12");
+            forTest3._acticityStartTime = DateTime.Parse("10:00");
+            forTest3._acticityEndTime = DateTime.Parse("11:00");
+
+            ActivitiesList.Add(forTest3);
+
+
+
+
+
+
+        }
         virtual public void AddPosition()  // virtual added that it can be if nedded override
             //can be divided to create position and to add time there
         {
@@ -36,18 +67,18 @@ namespace family_planner_16._11._2019
 
             string response = Console.ReadLine();
 
-            while (!DateTime.TryParse(response, out date))   //try to get out 0 value
-                {
-                    Console.WriteLine("Please renter date in right forma DD.MM");
-                    response = Console.ReadLine();
+                    while (!DateTime.TryParse(response, out date))   //try to get out 0 value
+                        {
+                            Console.WriteLine("Please renter date in right forma DD.MM");
+                            response = Console.ReadLine();
                
-                }
-            while (response.Contains(":")) //if entered Time format ex 11:45
-                {
-                    Console.WriteLine("Please renter date in right forma DD.MM \n (please use . insread of : ) ");
-                    response = Console.ReadLine();
+                        }
+                    while (response.Contains(":")) //if entered Time format ex 11:45
+                        {
+                            Console.WriteLine("Please renter date in right forma DD.MM \n (please use . insread of : ) ");
+                            response = Console.ReadLine();
 
-                }
+                        }
             Console.WriteLine("ok!");
 
             k._activityDay = date;
@@ -59,19 +90,19 @@ namespace family_planner_16._11._2019
 
             string response2 = Console.ReadLine();
 
-            while (!DateTime.TryParse(response2, out startTime)) //try to get out 0 value
-            {
-                Console.WriteLine("Please renter time in right forma HH:mm");
-                response2 = Console.ReadLine();
+                        while (!DateTime.TryParse(response2, out startTime)) //try to get out 0 value
+                        {
+                            Console.WriteLine("Please renter time in right forma HH:mm");
+                            response2 = Console.ReadLine();
 
-            }
+                        }
 
-            while (response2.Contains(".")) //if entered Time format ex 11:45
-            {
-                Console.WriteLine("Please renter time in right forma HH:mm \n (please use : insread of . ) ");
-                response2 = Console.ReadLine();
+                        while (response2.Contains(".")) //if entered Time format ex 11:45
+                        {
+                            Console.WriteLine("Please renter time in right forma HH:mm \n (please use : insread of . ) ");
+                            response2 = Console.ReadLine();
 
-            }
+                        }
             Console.WriteLine("ok!");
             k._acticityStartTime = startTime;
 
@@ -84,18 +115,18 @@ namespace family_planner_16._11._2019
 
             string response3 = Console.ReadLine();
 
-            while (!DateTime.TryParse(response3, out endTime)) //try to get out 0 value
-            {
-                Console.WriteLine("Please renter time in right forma HH:mm");
-                response3 = Console.ReadLine();
+                        while (!DateTime.TryParse(response3, out endTime)) //try to get out 0 value
+                        {
+                            Console.WriteLine("Please renter time in right forma HH:mm");
+                            response3 = Console.ReadLine();
 
-            }
-            while (response3.Contains(".")) //if entered Time format ex 11:45
-            {
-                Console.WriteLine("Please renter Time in right forma HH:mm \n (please use : insread of . ) ");
-                response3 = Console.ReadLine();
+                        }
+                        while (response3.Contains(".")) //if entered Time format ex 11:45
+                        {
+                            Console.WriteLine("Please renter Time in right forma HH:mm \n (please use : insread of . ) ");
+                            response3 = Console.ReadLine();
 
-            }
+                        }
 
 
             Console.WriteLine("ok!");
@@ -110,11 +141,12 @@ namespace family_planner_16._11._2019
         }
         //Metod to print all activities
 
-        public void PrintPositions() //PrintActivities
+        virtual public void PrintPositions() //PrintActivities
 
         {
             Console.WriteLine();
-            Console.WriteLine("Here is all positions");
+            Console.WriteLine("Here is all positions:");
+            
             Console.WriteLine();
                 foreach (var item in ActivitiesList)
                 {
@@ -122,7 +154,9 @@ namespace family_planner_16._11._2019
                 }
 
             Console.WriteLine();
-            }
+            Console.ReadLine();
+
+        }
 
         //Searching in the list by name. Can be added  seach by date and time to check afterwords it time is busy
         public void SearchPositionsByName()  
@@ -143,6 +177,7 @@ namespace family_planner_16._11._2019
 
                     positionName = item._activityName;
                         mom = 2;
+                        Console.ReadLine();
                         break;
 
                  }

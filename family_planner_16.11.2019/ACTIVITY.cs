@@ -15,7 +15,7 @@ namespace family_planner_16._11._2019
         public DateTime _activityDay { get; set; }
         public DateTime _acticityStartTime { get; set; }
         public DateTime _acticityEndTime { get; set; }
-        public DateTime _activityDuration { get; set; } //int changes to DateTime
+        public DateTime _activityDuration { get; set; } //int changes to DateTime not in use yet
 
         
 

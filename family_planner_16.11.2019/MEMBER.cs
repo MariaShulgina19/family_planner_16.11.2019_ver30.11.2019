@@ -16,7 +16,7 @@ namespace family_planner_16._11._2019
         public bool _isitAdult { get; set ; }
 
         static int _amountOfmembers = 1;
-        public FAMILY _familyTest { get; set; }
+        //public FAMILY _familyTest { get; set; }
         public MEMBER(string memberName)
 
 

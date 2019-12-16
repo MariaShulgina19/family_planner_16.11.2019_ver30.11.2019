@@ -9,6 +9,7 @@ namespace family_planner_16._11._2019
     class FAMILY
     {
         //Class Family is kind of list of members
+
         public List<MEMBER> FamilyList = new List<MEMBER>();// family created as a list of members
 
         //copied from Member
@@ -17,7 +18,7 @@ namespace family_planner_16._11._2019
 
         public int _memberAgeFamily { get; set; }  // later age can be change to date of bith
         public bool _isitAdultFamily { get; set; }
-        
+
 
         //test method to get values from search
 
@@ -26,9 +27,25 @@ namespace family_planner_16._11._2019
             //AddMember();
         }
 
+        public void AddMemberForTests() //this dates is for Test only  and it can be activates from Main menu pressing 13
+        {
+
+        MEMBER forTest1 = new MEMBER("Maria");
+           
+            forTest1._memberAge = 35;
+            forTest1._isitAdult = true;
+            FamilyList.Add(forTest1);
+
+        MEMBER forTest2 = new MEMBER("Robinson");
+           
+            forTest2._memberAge = 4;
+            forTest2._isitAdult = false;
+            
+            FamilyList.Add(forTest2);
+        }
       
 
-        public void AddMember()
+        public void AddMember() //Adding member from Console
         {
 
             Console.WriteLine("Give Member Name");
@@ -41,7 +58,7 @@ namespace family_planner_16._11._2019
 
                 //if (name != null)
                 //{
-                //     //Maat[i] pick up i 
+                //     
                 //    return;                  //getting member id
                 //}
             }
@@ -79,7 +96,6 @@ namespace family_planner_16._11._2019
             //giving same date to this class
             _memberIDFamily = k._memberID;
             _memberNameFamily = k._memberName;
-            _memberNameFamily = k._memberName;
             _isitAdultFamily = k._isitAdult;
 
 
@@ -91,17 +107,18 @@ namespace family_planner_16._11._2019
 
         {
             Console.WriteLine();
-            Console.WriteLine("Here is all members");
+            Console.WriteLine("There are all members:");
             Console.WriteLine();
+            
             foreach (var item in FamilyList)
             {
-                Console.WriteLine($"{item._memberID}. {item._memberName}, {item._memberAge} yers old.");
+                Console.WriteLine($"{item._memberID}. {item._memberName}, {item._memberAge} years old.");
             }
-        
+            Console.ReadLine();
         
         }
-
-        //This SearchMemer metod can ve changed later
+        
+        //This method need to change later !
         public void SearchMember()   //try cach or like this New PARAMETS public void SearchMember(string _memberName)
         {
             Console.WriteLine("Will try to search member");
@@ -129,6 +146,7 @@ namespace family_planner_16._11._2019
                         _memberNameFamily = item._memberName;
                         _memberNameFamily = item._memberName;
                         _isitAdultFamily = item._isitAdult;
+                        Console.ReadLine();
                         break;
                     }
                 }
@@ -147,7 +165,7 @@ namespace family_planner_16._11._2019
                
              }
         }
-        public MEMBER SearchMembeAddToResevation(string _memberName)//Search if member Loyty //VOID changed to MEMBER
+        public MEMBER SearchMembeAddToResevation(string _memberName)//Search if member founded //VOID changed to MEMBER
         {             
                 string searchMemberName = _memberName; 
                 foreach (var item in FamilyList)
