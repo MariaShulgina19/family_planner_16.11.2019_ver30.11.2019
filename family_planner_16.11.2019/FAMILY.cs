@@ -56,11 +56,7 @@ namespace family_planner_16._11._2019
                 Console.WriteLine("Give Member Name again"); //checking if 0
                 name = Console.ReadLine();
 
-                //if (name != null)
-                //{
-                //     
-                //    return;                  //getting member id
-                //}
+                
             }
 
             MEMBER k = new MEMBER(name);
@@ -75,6 +71,19 @@ namespace family_planner_16._11._2019
 
               }
               Console.WriteLine("ok!");
+            while (age < 0)
+            {
+                Console.WriteLine("Please renter age, give positive number");
+                response = Console.ReadLine();
+
+                while (!int.TryParse(response, out age))
+                {
+                    Console.WriteLine("Please renter Main Menu number");
+                    response = Console.ReadLine();
+
+                }
+
+            }
 
             k._memberAge = age;
             //cheking if member is an Adult
