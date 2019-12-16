@@ -30,6 +30,7 @@ namespace family_planner_16._11._2019
             do
 
                 {
+                Console.WriteLine("test");
                 Console.Clear();
                 Console.WriteLine("WELCOME TO FAMILY PLANNER ver 2.1");
                 Console.WriteLine();
