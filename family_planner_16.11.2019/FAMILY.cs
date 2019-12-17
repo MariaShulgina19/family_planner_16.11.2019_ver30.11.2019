@@ -101,7 +101,7 @@ namespace family_planner_16._11._2019
 
 
             FamilyList.Add(k);
-
+            FamilyList.Sort(); //easy to search in sorted list
         }
 
         public void PrintMembers()

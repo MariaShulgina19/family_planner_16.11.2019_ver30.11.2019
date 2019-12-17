@@ -147,6 +147,7 @@ namespace family_planner_16._11._2019
                
 
             ActivitiesList.Add(k);
+            ActivitiesList.Sort();
         }
         //Metod to print all activities
 
@@ -193,7 +194,7 @@ namespace family_planner_16._11._2019
 
         //Searching in the list by name. Can be added  seach by date and time to check afterwords if time is busy
         //Need to change it later
-        public void SearchPositionsByName()
+       virtual public void SearchPositionsByName()
         {
             Console.WriteLine("Will try to search activity");
             Console.WriteLine("Give activity name:");

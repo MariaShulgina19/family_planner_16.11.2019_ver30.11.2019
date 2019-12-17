@@ -118,6 +118,7 @@ namespace family_planner_16._11._2019
                 $"for {k.activity._activityName} Date: {k.activity._activityDay.ToShortDateString()}");
             Console.ReadLine();
             ResevationList.Add(k);
+            ResevationList.Sort();
 
         }
 
@@ -132,7 +133,7 @@ namespace family_planner_16._11._2019
 
                 foreach (var item in ResevationList)
                 {
-                    Console.WriteLine($"Reservation for {item.member._memberName}"+
+                    Console.WriteLine($"Reservation for {item.member._memberName} name: {item._activityName}"+
                         $"\n - {item.activity._activityName}, {item.activity._activityDay.ToShortDateString()} from {item.activity._acticityStartTime.ToShortTimeString()} to {item.activity._acticityEndTime.ToShortTimeString()} .");
                 }
 
@@ -143,8 +144,43 @@ namespace family_planner_16._11._2019
            //Add search method in reservation
         }
 
+        override public void SearchPositionsByName() //need to change this
+        {
+            Console.WriteLine("Will try to search reservation");
+            Console.WriteLine("Give Reservation name:");
 
+            int mom = 0;
+            while (mom < 1)
+            {
+                string positionName = Console.ReadLine();
+                foreach (var item in ResevationList)
+                {
+                    if (item._activityName == positionName)
+                    {
+                        //founded
+                        Console.WriteLine(item._activityName + " founded!");
+
+                        positionName = item._activityName;
+                        mom = 2;
+                        Console.ReadLine();
+                        break;
+
+                    }
+                }
+                if (mom < 1)
+
+                {
+                    Console.WriteLine(positionName + " not founded!");
+                    PrintPositions();
+                    Console.WriteLine("Give new name:");
+
+
+                }
+
+            }
+        }
     }
 }
+
 
 
