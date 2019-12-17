@@ -59,6 +59,15 @@ namespace family_planner_16._11._2019
 
             Console.WriteLine("Give Activity Name");
             string name = Console.ReadLine();
+
+            while (string.IsNullOrEmpty(name)) //checking if name is not 0 string.IsNullOrEmpty(name)
+            {
+                Console.WriteLine("Give Activity Name again"); //checking if 0
+                name = Console.ReadLine();
+
+
+            }
+
             ACTIVITY k = new ACTIVITY(name); 
 
             //adding date
@@ -75,7 +84,7 @@ namespace family_planner_16._11._2019
                         }
                     while (response.Contains(":")) //if entered Time format ex 11:45
                         {
-                            Console.WriteLine("Please renter date in right forma DD.MM \n (please use . insread of : ) ");
+                            Console.WriteLine("Please renter date in right forma DD.MM \n (please use . instead of : ) ");
                             response = Console.ReadLine();
 
                         }
@@ -158,42 +167,7 @@ namespace family_planner_16._11._2019
 
         }
 
-        //Searching in the list by name. Can be added  seach by date and time to check afterwords if time is busy
-        public void SearchPositionsByName()  
-        {
-            Console.WriteLine("Will try to search activity");
-            Console.WriteLine("Give activity name:");
-
-            int mom = 0;
-            while (mom < 1)
-            {
-                string positionName = Console.ReadLine();
-            foreach (var item in ActivitiesList)
-            {
-                if (item._activityName == positionName)
-                {
-                    //founded
-                    Console.WriteLine(item._activityName + " founded!");
-
-                    positionName = item._activityName;
-                        mom = 2;
-                        Console.ReadLine();
-                        break;
-
-                 }
-             }
-                if (mom < 1)
-
-                {
-                    Console.WriteLine(positionName + " not founded!");
-                    PrintPositions();
-                    Console.WriteLine("Give new name:");
-
-
-                }
-
-            }
-        }
+     
         public ACTIVITY SearchPositionsByNameToAddToReservation(string _activityName)
         {
             //Console.WriteLine("Will try to search activity"); //Can be added later
@@ -217,6 +191,44 @@ namespace family_planner_16._11._2019
             return null;
         }
 
+        //Searching in the list by name. Can be added  seach by date and time to check afterwords if time is busy
+        //Need to change it later
+        public void SearchPositionsByName()
+        {
+            Console.WriteLine("Will try to search activity");
+            Console.WriteLine("Give activity name:");
 
+            int mom = 0;
+            while (mom < 1)
+            {
+                string positionName = Console.ReadLine();
+                foreach (var item in ActivitiesList)
+                {
+                    if (item._activityName == positionName)
+                    {
+                        //founded
+                        Console.WriteLine(item._activityName + " founded!");
+
+                        positionName = item._activityName;
+                        mom = 2;
+                        Console.ReadLine();
+                        break;
+
+                    }
+                }
+                if (mom < 1)
+
+                {
+                    Console.WriteLine(positionName + " not founded!");
+                    PrintPositions();
+                    Console.WriteLine("Give new name:");
+
+
+                }
+
+            }
         }
+
+
+    }
 }

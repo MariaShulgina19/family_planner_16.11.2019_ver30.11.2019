@@ -56,10 +56,17 @@ namespace family_planner_16._11._2019
         }
         override public void AddPosition() // need to override to connect member and activity
         {
-            //_familyTest.PrintMembers(); it was fot test only
+        
             Console.WriteLine("Give Reservation Name");//check if it exist in list
             string name = Console.ReadLine();
-            //creating new list
+
+                    while (string.IsNullOrEmpty(name)) //checking if name is not 0 string.IsNullOrEmpty(name)
+                    {
+                        Console.WriteLine("Give Reservation Name again"); 
+                        name = Console.ReadLine();
+
+
+                    }
             RESERVATION k = new RESERVATION(name);
 
             //need to pick uo from memberlist oilio all data for this member
@@ -67,12 +74,12 @@ namespace family_planner_16._11._2019
             Console.WriteLine("Give Member Name");
 
             //string somename = ""; //check what is this
-            while ( member == null )
-            {
+                    while ( member == null )
+                    {
                
-                member = _familyTest.SearchMembeAddToResevation(Console.ReadLine());
+                        member = _familyTest.SearchMembeAddToResevation(Console.ReadLine());
               
-            }
+                    }
             
 
             k.member = member;
@@ -87,15 +94,15 @@ namespace family_planner_16._11._2019
             //AddActivitytoReservation()
             ACTIVITY activity = null;
             string someactivity = "";
-            while (activity == null)
-            {
-                Console.WriteLine("Give Activity Name");
-                someactivity = Console.ReadLine();
-                //While loop löytyykö _familyTest oliosta somename
-                Console.WriteLine("Starting search");
+                    while (activity == null)
+                    {
+                        Console.WriteLine("Give Activity Name");
+                        someactivity = Console.ReadLine();
+                        //While loop löytyykö _familyTest oliosta somename
+                        Console.WriteLine("Starting search");
 
-                activity = _activity_listTest.SearchPositionsByNameToAddToReservation(someactivity);
-            }
+                        activity = _activity_listTest.SearchPositionsByNameToAddToReservation(someactivity);
+                    }
 
             k.activity = activity;
             k.member = member;

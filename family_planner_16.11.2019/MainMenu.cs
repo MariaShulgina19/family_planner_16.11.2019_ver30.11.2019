@@ -25,11 +25,11 @@ namespace family_planner_16._11._2019
             RESERVATIONS_LIST myReservationList = new RESERVATIONS_LIST(myFamily, myActivitiesList);
             
             int numberAnswer;
-             //trycach
+            //Exception Handling
 
             do
 
-                {
+            {
                 
                 Console.Clear();
                 Console.WriteLine("WELCOME TO FAMILY PLANNER ver 2.1");
@@ -64,27 +64,12 @@ namespace family_planner_16._11._2019
                 string answer = Console.ReadLine();
 
                 //need to pick up from main menu // ADD  try catch exeption
-                while (!int.TryParse(answer, out numberAnswer) )
+                while (!int.TryParse(answer, out numberAnswer) || numberAnswer < 0)
                 {
                     Console.WriteLine("Please renter Main Menu number");
                     answer=Console.ReadLine();
 
                 }
-
-                while (numberAnswer < 0)
-                {
-                    Console.WriteLine("Please renter Main Menu number, give positive number");
-                    answer = Console.ReadLine();
-
-                    while (!int.TryParse(answer, out numberAnswer))
-                    {
-                        Console.WriteLine("Please renter Main Menu number");
-                        answer = Console.ReadLine();
-
-                    }
-
-                }
-
 
                 switch (numberAnswer)
 

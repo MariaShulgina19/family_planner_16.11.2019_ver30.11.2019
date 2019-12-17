@@ -30,7 +30,7 @@ namespace family_planner_16._11._2019
             conn.Close();
 */
             MainMenu mainMenu1 = new MainMenu();
-            string answer=" ";  // added just to check main menu
+            string answer=" ";  
             mainMenu1.PrintMainMenu(answer);
 
            

@@ -64,27 +64,14 @@ namespace family_planner_16._11._2019
             int age;
             string response = Console.ReadLine();
 
-            while (!int.TryParse(response, out age)) //try to get out 0 value
+            while (!int.TryParse(response, out age) || age < 0 || age > 120) //try to get out 0 value
               {
                Console.WriteLine("Please renter member age");
                response = Console.ReadLine();
 
               }
               Console.WriteLine("ok!");
-            while (age < 0)
-            {
-                Console.WriteLine("Please renter age, give positive number");
-                response = Console.ReadLine();
-
-                while (!int.TryParse(response, out age))
-                {
-                    Console.WriteLine("Please renter Main Menu number");
-                    response = Console.ReadLine();
-
-                }
-
-            }
-
+           
             k._memberAge = age;
             //cheking if member is an Adult
 
@@ -127,53 +114,7 @@ namespace family_planner_16._11._2019
         
         }
         
-        //This method need to change later !
-        public void SearchMember()   //try cach or like this New PARAMETS public void SearchMember(string _memberName)
-        {
-            Console.WriteLine("Will try to search member");
-            Console.WriteLine("Give member name:");
-            int mom = 0;
-            while (mom<1)
-            { 
-            string searchMemberName = Console.ReadLine();
-                foreach (var item in FamilyList)
-                {
-                    if (item._memberName == searchMemberName)
-                    {
-                       
-                        // founded
-                        Console.WriteLine(item._memberName + " founded!");
-                        //print out age?
 
-                        searchMemberName = item._memberName;
-                       
-
-                           mom = 2;
-                        //added 19.11.2019 to check if can be called from another class
-
-                        _memberIDFamily = item._memberID;
-                        _memberNameFamily = item._memberName;
-                        _memberNameFamily = item._memberName;
-                        _isitAdultFamily = item._isitAdult;
-                        Console.ReadLine();
-                        break;
-                    }
-                }
-
-                if (mom<1)
-
-                {
-                    Console.WriteLine();
-                    Console.WriteLine(searchMemberName + " not founded! \nALL members:\n  "); //founded need to stop
-                    
-                    PrintMembers();
-                    Console.WriteLine("Give member name:");
-
-                }
-                                    
-               
-             }
-        }
         public MEMBER SearchMembeAddToResevation(string _memberName)//Search if member founded //VOID changed to MEMBER
         {             
                 string searchMemberName = _memberName; 
@@ -193,6 +134,54 @@ namespace family_planner_16._11._2019
                 return null;
         }
 
+        //This method need to change later !
+        public void SearchMember()   //try cach or like this New PARAMETS public void SearchMember(string _memberName)
+        {
+            Console.WriteLine("Will try to search member");
+            Console.WriteLine("Give member name:");
+            int mom = 0;
+            while (mom < 1)
+            {
+                string searchMemberName = Console.ReadLine();
+                foreach (var item in FamilyList)
+                {
+                    if (item._memberName == searchMemberName)
+                    {
+
+                        // founded
+                        Console.WriteLine(item._memberName + " founded!");
+                        //print out age?
+
+                        searchMemberName = item._memberName;
+
+
+                        mom = 2;
+                       
+
+
+                        _memberIDFamily = item._memberID;
+                        _memberNameFamily = item._memberName;
+                        _memberNameFamily = item._memberName;
+                        _isitAdultFamily = item._isitAdult;
+                        Console.ReadLine();
+                        break;
+                    }
+                }
+
+                if (mom < 1)
+
+                {
+                    Console.WriteLine();
+                    Console.WriteLine(searchMemberName + " not founded! \nALL members:\n  "); //founded need to stop
+
+                    PrintMembers();
+                    Console.WriteLine("Give member name:");
+
+                }
+
+
+            }
+        }
     }
 
 
