@@ -59,7 +59,12 @@ namespace family_planner_16._11._2019
                 
             }
 
+            //check if member with same name or same parameters is already exixst
+
+           
             MEMBER k = new MEMBER(name);
+           
+
             Console.WriteLine("Give Member Age");
             int age;
             string response = Console.ReadLine();

@@ -94,6 +94,7 @@ namespace family_planner_16._11._2019
             //AddActivitytoReservation()
             ACTIVITY activity = null;
             string someactivity = "";
+
                     while (activity == null)
                     {
                         Console.WriteLine("Give Activity Name");
@@ -128,11 +129,12 @@ namespace family_planner_16._11._2019
             Console.WriteLine("Here is all reservations:");
 
             Console.WriteLine();
-            foreach (var item in ResevationList)
-            {
-                Console.WriteLine($"Reservation for {item.member._memberName}"+
-                    $"\n - {item.activity._activityName}, {item.activity._activityDay.ToShortDateString()} from {item.activity._acticityStartTime.ToShortTimeString()} to {item.activity._acticityEndTime.ToShortTimeString()} .");
-            }
+
+                foreach (var item in ResevationList)
+                {
+                    Console.WriteLine($"Reservation for {item.member._memberName}"+
+                        $"\n - {item.activity._activityName}, {item.activity._activityDay.ToShortDateString()} from {item.activity._acticityStartTime.ToShortTimeString()} to {item.activity._acticityEndTime.ToShortTimeString()} .");
+                }
 
             Console.WriteLine();
             Console.ReadLine();
